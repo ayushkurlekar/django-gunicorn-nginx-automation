@@ -1,0 +1,5 @@
+$user
+$WorkingDirectory
+$ExecStart (virtualenv path)
+$server_name = ip/domain name
+$static files path =

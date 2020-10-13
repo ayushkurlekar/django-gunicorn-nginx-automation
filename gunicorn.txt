@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=ayush
+Group=nginx
+WorkingDirectory=/home/ayush/myproject
+ExecStart=/home/ayush/myproject/myprojectenv/bin/gunicorn --workers 3 --bind unix:/home/ayush/myproject/myproject.sock core.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
